@@ -1,0 +1,23 @@
+ function addrow(ths) {
+                var a = $(ths).closest('div.row').find('input#txtpricefor').val();
+                var b = $(ths).closest('div.row').find('input#txtprice').val();
+                alert($(ths).closest('div.row').find('input#txtprice').val());
+                //this is the way by which we can find the closest value of any textbox in html by jquery
+                
+                var a = $('#txtpricefor').val();
+                var b = $('#txtprice').val();
+                if (a=='' || b=='') {
+                    alert("Please Add Price");
+                    return false;
+                }
+                $('#tblprice').append(
+                    '<tr>'
+                    + '    <td>' + a + '</td>'
+                    + '    <td>' + b + '</td>'
+                    + '    <td>'
+                    + '    <img src="../images/cancel.png" alt="Cancel Button" /></td>'
+                    + '</tr>'
+                    );
+                $('#txtpricefor').val('');
+                $('#txtprice').val('');
+            }
