@@ -1,0 +1,45 @@
+ <div class="row">
+                        <div class="col-lg-4">
+                            <div class="col-sm-12 ctrl-spc"><b>Price For</b></div>
+                            <div class="col-sm-12 ctrl-spc">
+                                <input type="text" name="subject" class="form-control input-sm" id="txtpricefor" placeholder="Enter the price" />
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="col-sm-12 ctrl-spc"><b>Price</b></div>
+                            <div class="col-sm-12 ctrl-spc">
+                                <input type="text" name="subject" class="form-control input-sm" id="txtprice" placeholder="Enter the exact price" />
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="col-sm-12 ctrl-spc " style="color: white;"><b>Price For</b></div>
+                            <div class="col-sm-12 ctrl-spc">
+                                <input type="button" id="btnAdd" value="ADD" class="btn btn-success btn-sm" onclick="addrow(this);" />
+                            </div>
+                        </div>
+                    </div>
+                    <table id="tblprice" width="80%" cellspacing="5" cellpadding="5" border="2" style="text-align: center;"></table>
+                    
+      //function of jquery
+      
+                    function addrow(ths) {
+            //    var a = $(ths).closest('div.row').find('input#txtpricefor').val();
+              //  var b = $(ths).closest('div.row').find('input#txtprice').val();
+                //alert($(ths).closest('div.row').find('input#txtprice').val());
+                var a = $('#txtpricefor').val();
+                var b = $('#txtprice').val();
+                if (a =='' || b =='') {
+                    alert("Please Add Price");
+                    return false;
+                }
+                $('#tblprice').append(
+                    '<tr>'
+                    + '    <td>' + a + '</td>'
+                    + '    <td>' + b + '</td>'
+                    + '    <td>'
+                    + '    <img src="../images/cancel.png" alt="Cancel Button" /></td>'
+                    + '</tr>'
+                    );
+                $('#txtpricefor').val('');
+                $('#txtprice').val('');
+            }
