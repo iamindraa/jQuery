@@ -1,0 +1,7 @@
+$.ajax is not a function
+
+sometime we get an error like this 
+just do one thing
+use <script src="https://code.jquery.com/jquery-3.1.1.min.js"> 
+instead of 
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"
